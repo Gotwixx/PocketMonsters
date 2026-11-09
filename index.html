@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Creature Kiln | Handmade and fired in Chattanooga</title>
-<meta name="description" content="Hand-shaped, oven-fired, hand-painted monster pieces made in Chattanooga, Tennessee.">
+<meta name="description" content="Hand-shaped, oven-fired, hand-painted pieces made in Chattanooga, Tennessee.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=DM+Sans:wght@400;500&family=Germania+One&display=swap" rel="stylesheet">
@@ -30,7 +30,6 @@ nav a:hover{color:var(--amber)}
 
 .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
 h1{font:900 clamp(2.6rem,6.5vw,4.8rem)/1 var(--display);letter-spacing:-.02em}
-h1 em{color:var(--amber);font-style:italic}
 .hero p{margin:1.3rem 0 1.9rem;max-width:42ch;color:var(--muted);font-size:1.12rem}
 .btn{display:inline-block;background:var(--amber);color:#1A1114;padding:.85rem 1.4rem;border-radius:0;font:800 .85rem var(--display);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
 .btn:hover{background:var(--paper)}
@@ -47,24 +46,21 @@ h2{font:900 clamp(1.8rem,3.6vw,2.5rem)/1.1 var(--display);margin-bottom:.5rem}
 .tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:.2rem 0;cursor:pointer;color:var(--muted);font:800 1rem var(--display);letter-spacing:.04em}
 .tabs button:hover{color:var(--paper)}
 .tabs button.on{color:var(--amber);border-color:var(--amber)}
-.cat{margin-bottom:2.8rem}
-.cat h3.sh{margin-bottom:.8rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.item{padding:1.1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s}
+.item{padding:1.1rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .item:hover{background:var(--card)}
-.art{aspect-ratio:1;display:grid;place-items:center;margin-bottom:.9rem;
-  background:radial-gradient(circle at 50% 42%,rgba(233,160,59,.24),transparent 62%),#120A0D}
-.art svg{width:58%;height:auto;max-height:88%}
+.art{aspect-ratio:1;display:grid;place-items:center;margin-bottom:.9rem;background:radial-gradient(circle at 50% 42%,rgba(233,160,59,.24),transparent 62%),#120A0D}
+.art svg{width:56%;height:auto;max-height:88%}
 .art.wide svg{width:76%}
+.meta{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:.7rem}
 .tag{font:700 .75rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.price{font:800 1rem var(--display);color:var(--amber)}
 .item h3{font:800 1.55rem/1.1 var(--display);margin:.45rem 0 .2rem}
 .item p{font-size:.95rem;color:var(--muted);margin-bottom:.8rem}
-.price{font:800 1rem var(--display);color:var(--amber);margin:.4rem 0 .8rem}
-.item .btn{padding:.6rem .9rem;font-size:.75rem}
-.tag{display:block}
-.sh{font:700 .8rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.go{font:800 .8rem var(--display);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--amber);border-bottom:2px solid transparent}
+.go:hover{border-color:var(--amber)}
+#empty{color:var(--muted);padding:1.5rem 0}
 
-.made{padding:0}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-top:1px solid var(--line);margin-top:1.5rem}
 .facts div{padding:1.3rem 1.3rem 1.3rem 0}
 .facts div+div{padding-left:1.3rem;border-left:1px solid var(--line)}
@@ -75,35 +71,65 @@ form{display:grid;gap:1.1rem;max-width:540px}
 label{display:grid;gap:.35rem;font:700 .78rem var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 input,textarea,select{font:400 1rem var(--body);letter-spacing:0;text-transform:none;padding:.75rem .85rem;border:1px solid var(--line);border-radius:0;background:#120A0D;color:var(--paper)}
 input:focus,textarea:focus,select:focus{border-color:var(--amber);outline:0}
+
+.cartbtn{background:none;border:1px solid var(--line);color:var(--paper);font:800 .8rem var(--display);letter-spacing:.1em;text-transform:uppercase;padding:.45rem .8rem;cursor:pointer;border-radius:0}
+.cartbtn:hover{border-color:var(--amber);color:var(--amber)}
+.buy{display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
+.add{background:var(--amber);color:#1A1114;border:0;border-radius:0;padding:.6rem .9rem;font:800 .75rem var(--display);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.add:hover{background:var(--paper)}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:20}
+#cart{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:21;display:flex;flex-direction:column;padding:1.2rem;overflow:auto}
+.ch{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:.8rem}
+.ch h2{margin:0;font-size:1.6rem}
+.tx{background:none;border:0;color:var(--muted);font:800 .8rem var(--display);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:.2rem}
+.tx:hover{color:var(--amber)}
+#lines{flex:1}
+.line{display:grid;grid-template-columns:1fr auto;gap:.3rem .8rem;padding:.9rem 0;border-bottom:1px solid var(--line);align-items:center}
+.line b{font:800 1.05rem var(--display)}
+.qty{display:flex;align-items:center;gap:.6rem}
+.qty button.q{width:1.9rem;height:1.9rem;border:1px solid var(--line);background:none;color:var(--paper);cursor:pointer;border-radius:0;font:700 1rem var(--body)}
+.qty button.q:hover{border-color:var(--amber)}
+.none{color:var(--muted);padding:1.2rem 0}
+.tot{display:flex;justify-content:space-between;font:800 1.2rem var(--display);padding:1rem 0}
+#toast{position:fixed;left:50%;bottom:1.5rem;transform:translateX(-50%);background:var(--paper);color:#1A1114;padding:.7rem 1.1rem;z-index:30;font-weight:500;max-width:90%}
+.cat{margin-bottom:2.8rem}
+.cat h3.sh{margin-bottom:.8rem}
+.cols{max-width:680px}
+.rows{list-style:none;padding:0;margin-top:1rem}
+.rows li{display:grid;grid-template-columns:.8fr 1fr 1.5fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.rows b{font:800 1rem var(--display)}
+.rows span{color:var(--muted)}
+.rows a{text-decoration:none;color:var(--amber);word-break:break-all}
+.rows a:hover{text-decoration:underline}
+h3.sh{font:700 .8rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
 footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.92rem}
-@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:1.5rem}.stage{max-width:300px;margin:0 auto;order:-1}.facts div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:1.5rem}.stage{max-width:300px;margin:0 auto;order:-1}.facts div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}.rows li{grid-template-columns:1fr;gap:.1rem}}
 </style>
 </head>
 <body>
-<!-- Placeholder art: dark spiky drawings. Swap in real photos later. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="lighter" viewBox="0 0 100 200">
-      <path d="M50 4C62 20 64 30 50 40 36 30 38 20 50 4Z" fill="#F2A33A"/><path d="M50 18C55 26 55 31 50 36 45 31 45 26 50 18Z" fill="#FFE29A"/>
+      <path d="M50 4C62 20 64 30 50 40 36 30 38 20 50 4Z" fill="#E9A03B"/><path d="M50 18C55 26 55 31 50 36 45 31 45 26 50 18Z" fill="#FFE29A"/>
       <rect x="31" y="40" width="38" height="32" rx="4" fill="#9A9DA4"/><circle cx="50" cy="54" r="9" fill="#4A4D54"/>
       <rect x="30" y="70" width="40" height="112" rx="9" fill="var(--b)"/>
       <g fill="var(--s)"><polygon points="30,86 6,98 30,110"/><polygon points="30,118 8,130 30,142"/><polygon points="30,150 10,160 30,172"/>
       <polygon points="70,86 94,98 70,110"/><polygon points="70,118 92,130 70,142"/><polygon points="70,150 90,160 70,172"/></g>
-      <circle cx="42" cy="100" r="6" fill="#F2A33A"/><circle cx="58" cy="100" r="6" fill="#F2A33A"/>
-      <rect x="40" y="94" width="3" height="12" rx="1.5" fill="#150D10"/><rect x="56" y="94" width="3" height="12" rx="1.5" fill="#150D10"/>
-      <path d="M38 134l4 9 4-9 4 9 4-9 4 9 4-9" fill="none" stroke="#F3E6D0" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle cx="42" cy="100" r="6" fill="#E9A03B"/><circle cx="58" cy="100" r="6" fill="#E9A03B"/>
+      <rect x="40" y="94" width="3" height="12" rx="1.5" fill="#120A0D"/><rect x="56" y="94" width="3" height="12" rx="1.5" fill="#120A0D"/>
+      <path d="M38 134l4 9 4-9 4 9 4-9 4 9 4-9" fill="none" stroke="#E0D3BC" stroke-width="2.5" stroke-linejoin="round"/>
     </symbol>
     <symbol id="tray" viewBox="0 0 200 120">
       <g fill="var(--s)"><polygon points="14,74 24,34 40,66"/><polygon points="52,62 66,22 84,56"/><polygon points="116,56 134,22 148,62"/><polygon points="160,66 176,34 186,74"/></g>
       <ellipse cx="100" cy="82" rx="92" ry="28" fill="var(--b)"/><ellipse cx="100" cy="76" rx="72" ry="18" fill="#0B0708"/>
-      <circle cx="82" cy="76" r="4" fill="#F2A33A"/><circle cx="118" cy="76" r="4" fill="#F2A33A"/>
+      <circle cx="82" cy="76" r="4" fill="#E9A03B"/><circle cx="118" cy="76" r="4" fill="#E9A03B"/>
     </symbol>
-    <symbol id="candle" viewBox="0 0 100 170">
-      <path d="M50 4C62 20 64 30 50 40 36 30 38 20 50 4Z" fill="#F2A33A"/><rect x="48" y="38" width="4" height="12" fill="#150D10"/>
-      <rect x="24" y="50" width="52" height="110" rx="10" fill="var(--b)"/>
-      <g fill="var(--s)"><polygon points="24,70 6,82 24,94"/><polygon points="24,110 8,120 24,132"/><polygon points="76,70 94,82 76,94"/><polygon points="76,110 92,120 76,132"/></g>
-      <circle cx="40" cy="88" r="5" fill="#F2A33A"/><circle cx="60" cy="88" r="5" fill="#F2A33A"/>
-      <path d="M38 118l4 8 4-8 4 8 4-8 4 8 4-8" fill="none" stroke="#F3E6D0" stroke-width="2.5" stroke-linejoin="round"/>
+    <symbol id="jar" viewBox="0 -10 120 120">
+      <g fill="var(--s)"><polygon points="30,6 40,-8 50,6"/><polygon points="70,6 80,-8 90,6"/></g>
+      <rect x="24" y="6" width="72" height="18" rx="3" fill="var(--s)"/><rect x="16" y="22" width="88" height="82" rx="14" fill="var(--b)"/>
+      <circle cx="44" cy="54" r="8" fill="#E9A03B"/><circle cx="76" cy="54" r="8" fill="#E9A03B"/>
+      <rect x="42.5" y="46" width="3" height="16" rx="1.5" fill="#120A0D"/><rect x="74.5" y="46" width="3" height="16" rx="1.5" fill="#120A0D"/>
+      <path d="M38 84l5 10 5-10 5 10 5-10 5 10 5-10 5 10 5-10" fill="none" stroke="#E0D3BC" stroke-width="2.5" stroke-linejoin="round"/>
     </symbol>
   </defs>
 </svg>
@@ -111,88 +137,149 @@ footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);f
 <div class="wrap">
   <header>
     <a class="logo" href="#top">Creature Kiln</a>
-    <nav><a href="#shop">Shop</a><a href="#made">How it’s made</a><a href="#contact">Order</a></nav>
+    <nav><a href="#shop">Shop</a><a href="#made">Process</a><a href="#custom">Custom</a><a href="#connect">Connect</a><button class="cartbtn" id="openCart" type="button">Cart (<span id="cnt">0</span>)</button></nav>
   </header>
 
   <main id="top">
     <div class="hero">
       <div>
-        <h1>Little beasts with a lot of <em>spike.</em></h1>
-        <p>Dark, spiky, and a little weird. Every piece is shaped and painted by hand in Chattanooga.</p>
-        <a class="btn" href="#shop">Meet the beasts</a><a class="btn ghost" href="#contact">Order one</a>
+        <h1>Handmade and fired in Chattanooga.</h1>
+        <p>Monster ash trays, lighter cases, and smoking accessories, shaped and painted by hand.</p>
+        <a class="btn" href="#shop">View the collection</a><a class="btn ghost" href="#custom">Custom pieces</a>
       </div>
-      <div class="stage"><svg viewBox="0 0 100 200" style="--b:#2B2328;--s:#C2412D" role="img" aria-label="Dark spiky monster lighter"><use href="#lighter"/></svg></div>
+      <div class="stage"><svg viewBox="0 0 100 200" style="--b:#2B2328;--s:#B8402D" role="img" aria-label="Dark monster lighter"><use href="#lighter"/></svg></div>
     </div>
 
     <section id="shop">
       <h2>Collection</h2>
       <p class="sub">Placeholder drawings for now. Real photos of each piece go here once they’re ready.</p>
       <div class="tabs" role="group" aria-label="Filter collection">
-        <button class="on" data-cat="All" aria-pressed="true">All</button>
-        <button data-cat="Ash trays" aria-pressed="false">Ash trays</button>
-        <button data-cat="Lighter cases" aria-pressed="false">Lighter cases</button>
-        <button data-cat="Other accessories" aria-pressed="false">Other accessories</button>
+        <button class="on" data-cat="All" aria-pressed="true">All</button><button data-cat="Ash trays" aria-pressed="false">Ash trays</button><button data-cat="Lighter cases" aria-pressed="false">Lighter cases</button><button data-cat="Other accessories" aria-pressed="false">Other accessories</button>
       </div>
-      <div class="cat" data-cat="Lighter cases"><h3 class="sh">Lighter cases</h3><div class="grid">
-        <article class="item"><div class="art"><svg viewBox="0 0 100 200" style="--b:#2B2328;--s:#C2412D" role="img" aria-label="Black lighter with red spikes"><use href="#lighter"/></svg></div>
-          <span class="tag">Lighter case</span><h3>Thornback</h3><p>Black body, red spikes</p><div class="price">$22</div><a class="btn" href="#contact">Order this one</a></article>
-        <article class="item"><div class="art"><svg viewBox="0 0 100 200" style="--b:#1F2A1E;--s:#8CA03F" role="img" aria-label="Dark green lighter with moss spikes"><use href="#lighter"/></svg></div>
-          <span class="tag">Lighter case</span><h3>Mossjaw</h3><p>Swamp green, moss spikes</p><div class="price">$22</div><a class="btn" href="#contact">Order this one</a></article>
-        <article class="item"><div class="art"><svg viewBox="0 0 100 200" style="--b:#1A1420;--s:#9A4FD0" role="img" aria-label="Black lighter with violet spikes"><use href="#lighter"/></svg></div>
-          <span class="tag">Lighter case</span><h3>Night Bloom</h3><p>Midnight body, violet spikes</p><div class="price">$24</div><a class="btn" href="#contact">Order this one</a></article>
-      </div></div>
       <div class="cat" data-cat="Ash trays"><h3 class="sh">Ash trays</h3><div class="grid">
-        <article class="item"><div class="art wide"><svg viewBox="0 0 200 120" style="--b:#2B2328;--s:#F2A33A" role="img" aria-label="Spiky dark ashtray dish"><use href="#tray"/></svg></div>
-          <span class="tag">Ash tray</span><h3>Crown Dish</h3><p>Spiky catch-all tray</p><div class="price">$26</div><a class="btn" href="#contact">Order this one</a></article>
-        <article class="item"><div class="art wide"><svg viewBox="0 0 200 120" style="--b:#1A1420;--s:#C2412D" role="img" aria-label="Spiky dark tray with red spikes"><use href="#tray"/></svg></div>
-          <span class="tag">Ash tray</span><h3>Bramble Bowl</h3><p>Black tray, red spikes</p><div class="price">$26</div><a class="btn" href="#contact">Order this one</a></article>
+        <article class="item" data-id="gravel-grin" data-name="Gravel Grin" data-price="26"><div class="art wide"><svg viewBox="0 0 200 120" style="--b:#2B2328;--s:#B8402D" role="img" aria-label="Gravel Grin, placeholder drawing"><use href="#tray"/></svg></div>
+          <div class="meta"><span class="tag">Ash trays</span><span class="price">$26</span></div><h3>Gravel Grin</h3><p>Black bowl, red horns</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
+        <article class="item" data-id="mossjaw-tray" data-name="Mossjaw Tray" data-price="26"><div class="art wide"><svg viewBox="0 0 200 120" style="--b:#1F2A1E;--s:#8CA03F" role="img" aria-label="Mossjaw Tray, placeholder drawing"><use href="#tray"/></svg></div>
+          <div class="meta"><span class="tag">Ash trays</span><span class="price">$26</span></div><h3>Mossjaw Tray</h3><p>Swamp green, moss horns</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
+        <article class="item" data-id="murk-tray" data-name="Murk Tray" data-price="28"><div class="art wide"><svg viewBox="0 0 200 120" style="--b:#1A1420;--s:#9A4FD0" role="img" aria-label="Murk Tray, placeholder drawing"><use href="#tray"/></svg></div>
+          <div class="meta"><span class="tag">Ash trays</span><span class="price">$28</span></div><h3>Murk Tray</h3><p>Midnight bowl, violet horns</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
       </div></div>
-      <div class="cat" data-cat="Other accessories"><h3 class="sh">Other accessories</h3><div class="grid">
-        <article class="item"><div class="art"><svg viewBox="0 0 100 170" style="--b:#3A1A1E;--s:#E0813A" role="img" aria-label="Spiky monster candle"><use href="#candle"/></svg></div>
-          <span class="tag">Accessory</span><h3>Ember Imp</h3><p>Monster candle, burnt-orange spikes</p><div class="price">$20</div><a class="btn" href="#contact">Order this one</a></article>
+      <div class="cat" data-cat="Lighter cases"><h3 class="sh">Lighter cases</h3><div class="grid">
+        <article class="item" data-id="thornback" data-name="Thornback" data-price="22"><div class="art"><svg viewBox="0 0 100 200" style="--b:#2B2328;--s:#B8402D" role="img" aria-label="Thornback, placeholder drawing"><use href="#lighter"/></svg></div>
+          <div class="meta"><span class="tag">Lighter cases</span><span class="price">$22</span></div><h3>Thornback</h3><p>Black body, red spikes</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
+        <article class="item" data-id="mossjaw-case" data-name="Mossjaw Case" data-price="22"><div class="art"><svg viewBox="0 0 100 200" style="--b:#1F2A1E;--s:#8CA03F" role="img" aria-label="Mossjaw Case, placeholder drawing"><use href="#lighter"/></svg></div>
+          <div class="meta"><span class="tag">Lighter cases</span><span class="price">$22</span></div><h3>Mossjaw Case</h3><p>Swamp green, moss spikes</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
+        <article class="item" data-id="ember-fang" data-name="Ember Fang" data-price="22"><div class="art"><svg viewBox="0 0 100 200" style="--b:#3A1A1E;--s:#E0813A" role="img" aria-label="Ember Fang, placeholder drawing"><use href="#lighter"/></svg></div>
+          <div class="meta"><span class="tag">Lighter cases</span><span class="price">$22</span></div><h3>Ember Fang</h3><p>Burnt red, orange spikes</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
+      </div></div>
+      <div class="cat" data-cat="Other accessories"><h3 class="sh">Other smoking accessories</h3><div class="grid">
+        <article class="item" data-id="hollow-jar" data-name="Hollow Jar" data-price="28"><div class="art"><svg viewBox="0 -10 120 120" style="--b:#2B2328;--s:#B8402D" role="img" aria-label="Hollow Jar, placeholder drawing"><use href="#jar"/></svg></div>
+          <div class="meta"><span class="tag">Other smoking accessories</span><span class="price">$28</span></div><h3>Hollow Jar</h3><p>Monster stash jar, red lid</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
+        <article class="item" data-id="murk-jar" data-name="Murk Jar" data-price="28"><div class="art"><svg viewBox="0 -10 120 120" style="--b:#1A1420;--s:#9A4FD0" role="img" aria-label="Murk Jar, placeholder drawing"><use href="#jar"/></svg></div>
+          <div class="meta"><span class="tag">Other smoking accessories</span><span class="price">$28</span></div><h3>Murk Jar</h3><p>Monster stash jar, violet lid</p><div class="buy"><button class="add" type="button">Add to cart</button><a class="go" href="#">Buy now →</a></div></article>
       </div></div>
     </section>
 
     <section id="made">
-      <div class="made">
-        <h2>How it’s made</h2>
-        <div class="facts">
-          <div><h3>Shaped by hand</h3><p>Every piece starts as air-dry clay, shaped by hand and never poured into a mold, so each one has its own quirks.</p></div>
-          <div><h3>Painted in detail</h3><p>Eyes, teeth, and spikes are painted on one piece at a time.</p></div>
-          <div><h3>Sealed to last</h3><p>A glossy sealer coat protects the paint and gives it a smooth finish.</p></div>
-        </div>
+      <h2>Process</h2>
+      <div class="facts">
+        <div><h3>Shaped and fired</h3><p>Every piece is shaped by hand from a high-quality clay, then fired in an oven so it sets hard.</p></div>
+        <div><h3>Hand-painted</h3><p>Eyes, teeth, and linework are painted on by hand, one piece at a time.</p></div>
+        <div><h3>Finished in gloss</h3><p>A gloss coat goes over the paint for a smooth, shiny finish.</p></div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Adopt a beast</h2>
-      <p class="sub">Tell me which piece you want and how to reach you. I’ll reply with payment and shipping details.</p>
-      <form action="mailto:stopsign123@icloud.com" method="post" enctype="text/plain">
+    <section id="custom">
+      <h2>Custom pieces</h2>
+      <p class="sub">Have an idea for a one-of-a-kind piece? Send the details and I’ll reply by email with what’s possible and a price. Some finished custom pieces get shared on our TikTok.</p>
+      <form action="mailto:stopsign123@icloud.com?subject=Custom%20piece%20request" method="post" enctype="text/plain">
         <label>Your name<input name="name" required></label>
         <label>Your email<input type="email" name="email" required></label>
-        <label>Which piece?
-          <select name="piece"><option>Thornback</option><option>Mossjaw</option><option>Night Bloom</option><option>Crown Dish</option><option>Bramble Bowl</option><option>Ember Imp</option><option>Custom request</option></select></label>
-        <label>Message<textarea name="message" rows="4"></textarea></label>
-        <button class="btn" type="submit">Send order request</button>
+        <label>What do you want made?<textarea name="idea" rows="4" required></textarea></label>
+        <label>Colors or theme<input name="theme"></label>
+        <label>Budget<select name="budget"><option>Not sure yet</option><option>Under $30</option><option>$30 to $60</option><option>$60 and up</option></select></label>
+        <label>Reference image link (optional)<input name="reference"></label>
+        <button class="btn" type="submit">Send custom request</button>
       </form>
+    </section>
+
+    <section id="connect">
+      <h2>Connect</h2>
+      <p class="sub">Find Creature Kiln on social media, or get in touch by email.</p>
+      <div class="cols">
+        <div>
+          <h3 class="sh">Socials and contact</h3>
+          <ul class="rows">
+            <li><b>Instagram</b><span>Placeholder</span><span>@yourhandle</span></li>
+            <li><b>Facebook</b><span>Placeholder</span><span>Your Page Name</span></li>
+            <li><b>TikTok</b><span>Placeholder</span><span>@yourhandle</span></li>
+            <li><b>Email</b><span>General</span><a href="mailto:stopsign123@icloud.com">stopsign123@icloud.com</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>© <span id="yr">2026</span> Creature Kiln. Handmade in Chattanooga, Tennessee. For adults 21 and older.</footer>
 </div>
+<div id="ov" hidden></div>
+<aside id="cart" hidden aria-label="Cart">
+  <div class="ch"><h2>Cart</h2><button class="tx" id="closeCart" type="button">Close</button></div>
+  <div id="lines"></div>
+  <div class="tot"><span>Subtotal</span><span id="sub">$0</span></div>
+  <button class="btn" id="checkout" type="button">Checkout</button>
+</aside>
+<div id="toast" role="status" hidden></div>
 <script>
 document.getElementById("yr").textContent=new Date().getFullYear();
-document.querySelectorAll(".tabs button").forEach(button=>button.addEventListener("click",()=>{
-  const category=button.dataset.cat;
-  document.querySelectorAll(".tabs button").forEach(tab=>{
-    const active=tab===button;
-    tab.classList.toggle("on",active);
-    tab.setAttribute("aria-pressed",String(active));
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll(".tabs button")),groups=[].slice.call(document.querySelectorAll(".cat"));
+  tabs.forEach(function(b){b.addEventListener("click",function(){
+    var c=b.getAttribute("data-cat");
+    tabs.forEach(function(t){t.classList.toggle("on",t===b);t.setAttribute("aria-pressed",t===b)});
+    groups.forEach(function(g){g.hidden=!(c==="All"||g.getAttribute("data-cat")===c)});
+  })});
+})();
+
+(function(){
+  var CHECKOUT_URL="";
+  var $=function(i){return document.getElementById(i)};
+  var catalog={},cart=[];
+  [].slice.call(document.querySelectorAll(".item")).forEach(function(el){
+    catalog[el.getAttribute("data-id")]={name:el.getAttribute("data-name"),price:Number(el.getAttribute("data-price"))};
   });
-  document.querySelectorAll(".cat").forEach(section=>{
-    section.hidden=category!=="All"&&section.dataset.cat!==category;
+  try{cart=JSON.parse(localStorage.getItem("pb_cart")||"[]").filter(function(l){return catalog[l.id]})}catch(e){cart=[]}
+  function save(){try{localStorage.setItem("pb_cart",JSON.stringify(cart))}catch(e){}}
+  function money(n){return "$"+(n%1?n.toFixed(2):n)}
+  var tt;function toast(m){var t=$("toast");t.textContent=m;t.hidden=false;clearTimeout(tt);tt=setTimeout(function(){t.hidden=true},2600)}
+  function render(){
+    var n=0,sum=0,h="";
+    cart.forEach(function(l){var c=catalog[l.id];n+=l.qty;sum+=c.price*l.qty;
+      h+='<div class="line"><b>'+c.name+'</b><span>'+money(c.price*l.qty)+'</span><div class="qty"><button class="q" data-act="dec" data-id="'+l.id+'" aria-label="Fewer">−</button><span>'+l.qty+'</span><button class="q" data-act="inc" data-id="'+l.id+'" aria-label="More">+</button></div><button class="tx" data-act="rm" data-id="'+l.id+'">Remove</button></div>'});
+    $("lines").innerHTML=h||'<p class="none">Your cart is empty.</p>';
+    $("cnt").textContent=n;$("sub").textContent=money(sum);
+  }
+  function add(id){var l=cart.filter(function(x){return x.id===id})[0];if(l)l.qty++;else cart.push({id:id,qty:1});save();render()}
+  function openC(o){$("cart").hidden=!o;$("ov").hidden=!o}
+  document.addEventListener("click",function(e){
+    var t=e.target;
+    if(t.classList.contains("add")){add(t.closest(".item").getAttribute("data-id"));toast("Added to cart");return}
+    if(t.classList.contains("go")&&t.getAttribute("href")==="#"){e.preventDefault();toast("Buy link isn’t connected yet.");return}
+    var act=t.getAttribute("data-act"),id=t.getAttribute("data-id");
+    if(act){var l=cart.filter(function(x){return x.id===id})[0];
+      if(act==="inc")l.qty++;if(act==="dec")l.qty--;
+      cart=cart.filter(function(x){return act==="rm"?x.id!==id:x.qty>0});save();render()}
   });
-}));
+  $("openCart").addEventListener("click",function(){openC(true)});
+  $("closeCart").addEventListener("click",function(){openC(false)});
+  $("ov").addEventListener("click",function(){openC(false)});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")openC(false)});
+  $("checkout").addEventListener("click",function(){
+    if(!cart.length){toast("Your cart is empty.");return}
+    if(CHECKOUT_URL){window.location.href=CHECKOUT_URL}else{toast("Checkout isn’t connected yet.")}
+  });
+  render();
+})();
 </script>
 </body>
 </html>
